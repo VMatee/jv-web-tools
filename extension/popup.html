@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>JV-web-tools</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="panel">
+    <header>
+      <div class="brand">JV</div>
+      <div>
+        <h1>JV-web-tools</h1>
+        <p>Export current-site browser data as structured JSON.</p>
+      </div>
+    </header>
+
+    <section class="site-card">
+      <span class="label">Current website</span>
+      <strong id="site">Detecting...</strong>
+    </section>
+
+    <label class="option">
+      <input id="include-local-storage" type="checkbox">
+      <span>
+        <strong>Include localStorage</strong>
+        <small>Advanced. Off by default for portable session exports.</small>
+      </span>
+    </label>
+
+    <button id="export" class="primary" type="button">Export Web JSON</button>
+
+    <div id="status" class="status" role="status" aria-live="polite">Ready.</div>
+
+    <section id="result" class="result" hidden>
+      <div class="result-title">Export ready</div>
+      <div id="summary" class="summary"></div>
+      <button id="download" type="button">Download JSON</button>
+    </section>
+
+    <p class="security">
+      Exported cookies can contain active login credentials. Keep the JSON file private.
+    </p>
+  </main>
+
+  <script type="module" src="popup.mjs"></script>
+</body>
+</html>

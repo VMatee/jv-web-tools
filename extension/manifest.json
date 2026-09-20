@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "JV-web-tools",
+  "version": "1.0.1",
+  "description": "Developer utility to export current-site browser data as web-compatible JSON for local testing.",
+  "permissions": [
+    "activeTab",
+    "cookies",
+    "scripting"
+  ],
+  "optional_host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "action": {
+    "default_title": "JV-web-tools",
+    "default_popup": "popup.html"
+  }
+}
